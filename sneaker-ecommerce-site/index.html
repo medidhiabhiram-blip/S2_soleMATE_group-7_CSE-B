@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>soleMATE | Login</title>
+  <link rel="stylesheet" href="assets/css/login.css" />
+</head>
+<body>
+  <div class="login-toast" id="loginToast">Login successful!</div>
+
+  <main class="login-page">
+    <section class="login-card">
+      <a href="home.html" class="brand">soleMATE</a>
+      <p class="mode-label" id="modeLabel">Member login</p>
+      <h1 id="formTitle">Welcome back</h1>
+      <p id="formText">Login to enter the soleMATE sneaker store and track your cart, checkout and orders.</p>
+
+      <div class="auth-tabs">
+        <button class="active" type="button" id="loginTab">Login</button>
+        <button type="button" id="signupTab">Sign Up</button>
+      </div>
+
+      <form id="loginForm">
+        <label class="name-field" id="nameField">Full Name<input id="nameInput" type="text" placeholder="Your name"></label>
+        <label>Email<input id="emailInput" type="email" placeholder="you@example.com" required></label>
+        <label>Password<input id="passwordInput" type="password" placeholder="Password" required minlength="4"></label>
+        <label class="name-field" id="confirmField">Confirm Password<input id="confirmInput" type="password" placeholder="Confirm password"></label>
+        <button type="submit" id="submitBtn">Login</button>
+      </form>
+
+      <p class="switch-copy" id="switchCopy">New to soleMATE? <button type="button" id="switchBtn">Create an account</button></p>
+    </section>
+
+    <section class="login-art">
+      <div class="rotator-frame">
+        <img src="assets/img/login-rotating-shoes.png" alt="Sneaker collection" class="rotating-sneakers" />
+      </div>
+      <div class="art-copy">
+        <p>soleMATE sneaker wall</p>
+        <h2>Rotate into the drop.</h2>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

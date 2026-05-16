@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>soleMATE | Marketplace</title>
+  <link rel="stylesheet" href="assets/css/marketplace.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="brand" href="home.html">soleMATE</a>
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="store-hero">
+      <div>
+        <p class="tagline">Marketplace</p>
+        <h1>Find your next flex.</h1>
+        <p>Filter premium sneakers, compare prices, and open full product pages with views, sizes and checkout.</p>
+      </div>
+      <div class="search-box market-tools">
+        <input type="search" id="searchInput" placeholder="Search sneakers..." />
+        <div class="category-menu" id="categoryMenu">
+          <button class="category-trigger" id="categoryTrigger" type="button" aria-expanded="false">
+            <span class="category-symbol" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </span>
+            <span id="categoryLabel">All Categories</span>
+            <strong>⌄</strong>
+          </button>
+          <div class="category-panel" id="categoryPanel">
+            <button type="button" class="active" data-category="all">All Categories</button>
+            <button type="button" data-category="running">Running</button>
+            <button type="button" data-category="street">Streetwear</button>
+            <button type="button" data-category="court">Court / Basketball</button>
+            <button type="button" data-category="lifestyle">Lifestyle</button>
+            <button type="button" data-category="anime">Anime Drops</button>
+            <button type="button" data-category="new">New Arrivals</button>
+            <button type="button" data-category="bestseller">Best Sellers</button>
+            <button type="button" data-category="under5000">Under ₹5,000</button>
+            <button type="button" data-category="premium">Premium Picks</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-grid" id="productGrid">
+      <article class="product-card" data-name="Volt Runner Pro" data-category="running" data-tags="running bestseller premium new">
+        <div class="product-image orange-shoe image-slot"><img src="assets/img/volt-option1-side.png" alt="Volt Runner Pro"></div>
+        <p class="badge">Best Seller</p>
+        <h2>Volt Runner Pro</h2>
+        <p>Light runner with energy-return sole and breathable knit upper.</p>
+        <div class="meta"><strong>₹5,999</strong><span>4.8 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=volt">View</a><a href="checkout/index.html?shoe=volt">Buy</a><button class="quick-cart" data-shoe="volt">Cart</button></div>
+      </article>
+      <article class="product-card" data-name="Shadow Court X" data-category="court" data-tags="court basketball premium">
+        <div class="product-image black-shoe image-slot"><img src="assets/img/shadow-option1-side.png" alt="Shadow Court X"></div>
+        <p class="badge">Best Seller</p>
+        <h2>Shadow Court X</h2>
+        <p>High-top court shoe with padded ankle and grip-ready outsole.</p>
+        <div class="meta"><strong>₹7,499</strong><span>4.7 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=shadow">View</a><a href="checkout/index.html?shoe=shadow">Buy</a><button class="quick-cart" data-shoe="shadow">Cart</button></div>
+      </article>
+      <article class="product-card" data-name="Cloud Drift 2" data-category="street" data-tags="street lifestyle under5000">
+        <div class="product-image white-shoe image-slot"><img src="assets/img/market-cloud-drift-2.png" alt="Cloud Drift 2"></div>
+        <p class="badge">Clean Fit</p>
+        <h2>Cloud Drift 2</h2>
+        <p>Minimal everyday sneaker with soft foam and smooth finish.</p>
+        <div class="meta"><strong>₹4,999</strong><span>4.6 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=cloud">View</a><a href="checkout/index.html?shoe=cloud">Buy</a><button class="quick-cart" data-shoe="cloud">Cart</button></div>
+      </article>
+      <article class="product-card leather-gold-card" data-name="Manga Blaze Low" data-category="street" data-tags="street anime premium">
+        <div class="product-image anime-shoe image-slot"><img src="assets/img/market-anime-blaze-low.png" alt="Manga Blaze Low"></div>
+        <p class="badge">Anime Drop</p>
+        <h2>Manga Blaze Low</h2>
+        <p>Illustrated panels, bright sole, and comic-inspired overlays.</p>
+        <div class="meta"><strong>₹6,299</strong><span>4.9 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=anime">View</a><a href="checkout/index.html?shoe=anime">Buy</a><button class="quick-cart" data-shoe="anime">Cart</button></div>
+      </article>
+      <article class="product-card" data-name="Wukong Special" data-category="running" data-tags="running lifestyle new">
+        <div class="product-image blue-shoe image-slot"><img src="assets/img/market-metro-sprint.png" alt="Wukong Special"></div>
+        <p class="badge">New</p>
+        <h2>Wukong Special</h2>
+        <p>Daily trainer for long walks, campus routes and quick runs.</p>
+        <div class="meta"><strong>₹5,499</strong><span>4.5 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=metro">View</a><a href="checkout/index.html?shoe=metro">Buy</a><button class="quick-cart" data-shoe="metro">Cart</button></div>
+      </article>
+      <article class="product-card leather-gold-card" data-name="Golden Dunker" data-category="court" data-tags="court basketball premium bestseller">
+        <div class="product-image red-shoe image-slot"><img src="assets/img/market-prime-dunker.png" alt="Golden Dunker"></div>
+        <p class="badge">Hot</p>
+        <h2>Golden Dunker</h2>
+        <p>Strong court profile with bounce cushioning and wide base.</p>
+        <div class="meta"><strong>₹6,999</strong><span>4.4 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=prime">View</a><a href="checkout/index.html?shoe=prime">Buy</a><button class="quick-cart" data-shoe="prime">Cart</button></div>
+      </article>
+
+      <!-- EXTRA COPIED SHOES START -->
+      <article class="product-card leather-gold-card" data-name="Solar Monk Runner" data-category="running" data-tags="running new under5000">
+        <div class="product-image orange-shoe image-slot"><img src="assets/img/volt-option1-side.png" alt="Solar Monk Runner"></div>
+        <p class="badge">New Copy</p>
+        <h2>Solar Monk Runner</h2>
+        <p>Speed-focused runner with a warm streetwear finish.</p>
+        <div class="meta"><strong>₹5,299</strong><span>4.5 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=volt">View</a><a href="checkout/index.html?shoe=volt&price=₹5,299">Buy</a><button class="quick-cart" data-shoe="volt">Cart</button></div>
+      </article>
+
+      <article class="product-card" data-name="Night Hawk Court" data-category="court" data-tags="court basketball premium bestseller">
+        <div class="product-image black-shoe image-slot"><img src="assets/img/shadow-option1-side.png" alt="Night Hawk Court"></div>
+        <p class="badge">Best Seller</p>
+        <h2>Night Hawk Court</h2>
+        <p>Court-style sneaker with bold panels and strong grip.</p>
+        <div class="meta"><strong>₹7,199</strong><span>4.7 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=shadow">View</a><a href="checkout/index.html?shoe=shadow&price=₹7,199">Buy</a><button class="quick-cart" data-shoe="shadow">Cart</button></div>
+      </article>
+
+      <article class="product-card" data-name="Ivory Flow 3" data-category="lifestyle" data-tags="street lifestyle under5000">
+        <div class="product-image white-shoe image-slot"><img src="assets/img/market-cloud-drift-2.png" alt="Ivory Flow 3"></div>
+        <p class="badge">Clean Fit</p>
+        <h2>Ivory Flow 3</h2>
+        <p>Minimal lifestyle sneaker made for daily outfits.</p>
+        <div class="meta"><strong>₹4,799</strong><span>4.4 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=cloud">View</a><a href="checkout/index.html?shoe=cloud&price=₹4,799">Buy</a><button class="quick-cart" data-shoe="cloud">Cart</button></div>
+      </article>
+
+      <article class="product-card leather-gold-card" data-name="Dragon Pulse Low" data-category="anime" data-tags="street anime premium">
+        <div class="product-image anime-shoe image-slot"><img src="assets/img/market-anime-blaze-low.png" alt="Dragon Pulse Low"></div>
+        <p class="badge">Anime Drop</p>
+        <h2>Dragon Pulse Low</h2>
+        <p>Graphic-style sneaker with loud colors and anime energy.</p>
+        <div class="meta"><strong>₹6,599</strong><span>4.8 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=anime">View</a><a href="checkout/index.html?shoe=anime&price=₹6,599">Buy</a><button class="quick-cart" data-shoe="anime">Cart</button></div>
+      </article>
+
+      <article class="product-card" data-name="Bronze Orbit" data-category="street" data-tags="street lifestyle new">
+        <div class="product-image blue-shoe image-slot"><img src="assets/img/wukong-special.png" alt="Bronze Orbit"></div>
+        <p class="badge">Fresh</p>
+        <h2>Bronze Orbit</h2>
+        <p>Black-and-gold sneaker with premium detailed styling.</p>
+        <div class="meta"><strong>₹6,899</strong><span>4.6 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=metro">View</a><a href="checkout/index.html?shoe=metro&price=₹6,899">Buy</a><button class="quick-cart" data-shoe="metro">Cart</button></div>
+      </article>
+
+      <article class="product-card" data-name="Court Flame Max" data-category="court" data-tags="court basketball premium">
+        <div class="product-image red-shoe image-slot"><img src="assets/img/market-prime-dunker.png" alt="Court Flame Max"></div>
+        <p class="badge">Premium</p>
+        <h2>Court Flame Max</h2>
+        <p>Strong court profile with bounce cushioning and bold shape.</p>
+        <div class="meta"><strong>₹7,299</strong><span>4.5 ★</span></div>
+        <div class="card-actions"><a href="product.html?shoe=prime">View</a><a href="checkout/index.html?shoe=prime&price=₹7,299">Buy</a><button class="quick-cart" data-shoe="prime">Cart</button></div>
+      </article>
+      <!-- EXTRA COPIED SHOES END -->
+
+    </section>
+  </main>
+
+  <footer><p>© 2026 soleMATE Marketplace</p></footer>
+  <script src="assets/js/marketplace.js"></script>
+</body>
+</html>

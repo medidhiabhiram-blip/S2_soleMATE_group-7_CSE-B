@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>soleMATE | Profile</title>
+  <link rel="stylesheet" href="assets/css/profile.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="brand" href="home.html">soleMATE</a>
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-card">
+      <div class="avatar">SM</div>
+      <p class="tagline">Member profile</p>
+      <h1 id="profileName">soleMATE Sneakerhead</h1>
+      <p class="bio">Manage your demo account, saved cart items, preferred shoe size, and streetwear drops.</p>
+      <div class="profile-stats">
+        <article><strong id="cartCount">0</strong><span>Cart items</span></article>
+        <article><strong id="orderCount">0</strong><span>My orders</span></article>
+      </div>
+      <div class="profile-actions">
+        <a href="cart.html">View Cart</a>
+        <a href="marketplace.html">Shop More</a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article>
+        <h2>Saved details</h2>
+        <p>Name: <span id="savedName">soleMATE User</span></p>
+        <p>Email: <span id="savedEmail">user@solemate.demo</span></p>
+        <p>Location: India</p>
+      </article>
+      <article>
+        <h2>Customer database</h2>
+        <p>Total registered customers: <span id="customerDbCount">0</span></p>
+        <p>Current customer ID: <span id="customerId">Guest</span></p>
+        <p>Data is saved in browser localStorage.</p>
+      </article>
+    </section>
+
+    <section class="orders-section">
+      <div class="section-heading">
+        <p class="tagline">My Orders</p>
+        <h2>Recently placed orders</h2>
+      </div>
+      <div id="ordersList" class="orders-list"></div>
+    </section>
+
+    <section class="orders-section reviews-profile-section">
+      <div class="section-heading">
+        <p class="tagline">My Reviews</p>
+        <h2>Reviews you submitted</h2>
+      </div>
+      <div id="profileReviewsList" class="orders-list"></div>
+    </section>
+
+  </main>
+
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>soleMATE | Sneaker Details</title>
+  <link rel="stylesheet" href="assets/css/product.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="brand" href="home.html">soleMATE</a>
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <section class="gallery">
+      <div class="view-tabs">
+        <button class="view-tab active" data-view="side">Side View</button>
+        <button class="view-tab" data-view="top">Top View</button>
+      </div>
+      <div class="main-shoe side-view image-slot" id="mainShoe"><img id="mainShoeImg" src="" alt="Selected sneaker"></div>
+            <div class="color-title">Available color options</div>
+      <div class="thumb-row" id="colorOptions"></div>
+    </section>
+    <section class="details">
+      <p class="tagline">Product details</p>
+      <h1 id="productTitle">Volt Runner Pro</h1>
+      <p id="productDesc">A light runner with energy-return sole, soft ankle padding and breathable knit upper.</p>
+      <div class="rating">★★★★★ <span>4.8 rating</span></div>
+      <h2 id="productPrice">₹5,999</h2>
+      <p class="selected-color">Selected: <strong id="selectedColor">Volt Orange</strong></p>
+
+      <section class="build-options">
+        <h3>Build options</h3>
+        <div class="option-group">
+          <p>Sole Type</p>
+          <button class="build-option active" data-option-type="sole" data-label="Classic Sole" data-extra="0">Classic</button>
+          <button class="build-option" data-option-type="sole" data-label="Grip Sole" data-extra="600">Grip +₹600</button>
+          <button class="build-option" data-option-type="sole" data-label="Air Sole" data-extra="1200">Air +₹1,200</button>
+        </div>
+        <div class="option-group">
+          <p>Cushion</p>
+          <button class="build-option active" data-option-type="cushion" data-label="Standard Cushion" data-extra="0">Standard</button>
+          <button class="build-option" data-option-type="cushion" data-label="Soft Foam Cushion" data-extra="500">Soft Foam +₹500</button>
+          <button class="build-option" data-option-type="cushion" data-label="Pro Bounce Cushion" data-extra="1000">Pro Bounce +₹1,000</button>
+        </div>
+        <div class="option-group">
+          <p>Material</p>
+          <button class="build-option active" data-option-type="material" data-label="Standard Mesh" data-extra="0">Standard</button>
+          <button class="build-option" data-option-type="material" data-label="Premium Leather" data-extra="1500">Premium +₹1,500</button>
+          <button class="build-option" data-option-type="material" data-label="Elite Knit" data-extra="2000">Elite +₹2,000</button>
+        </div>
+        <div class="price-breakdown">
+          <span>Base: <strong id="basePriceText">₹0</strong></span>
+          <span>Upgrades: <strong id="upgradePriceText">₹0</strong></span>
+        </div>
+      </section>
+      <div class="size-box">
+        <p>Select size</p>
+        <button>6</button><button>7</button><button class="active">8</button><button>9</button><button>10</button>
+      </div>
+      <div class="details-actions">
+        <a class="buy" id="buyNow" href="checkout/index.html?shoe=volt">Buy Now</a>
+        <button id="cartBtn">Add to Cart</button>
+      </div>
+      <ul class="features">
+        <li>Two display angles: side view and top view.</li>
+        <li>Three color option slots with side and top view support.</li>
+        <li>Cart saves multiple shoes using browser localStorage.</li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="review-section">
+    <div class="review-head">
+      <p class="tagline">Reviews</p>
+      <h2>Customer reviews</h2>
+      <p>Write a quick review for this shoe. It will be saved in your browser and shown in your profile.</p>
+    </div>
+    <form id="reviewForm" class="review-form">
+      <label>Your Name<input id="reviewName" type="text" placeholder="Your name" required></label>
+      <label>Rating
+        <select id="reviewRating" required>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+      </label>
+      <label>Review<textarea id="reviewText" placeholder="Write your review..." required></textarea></label>
+      <button type="submit">Submit Review</button>
+    </form>
+    <div id="productReviews" class="reviews-list"></div>
+  </section>
+
+  <script src="assets/js/product.js"></script>
+</body>
+</html>

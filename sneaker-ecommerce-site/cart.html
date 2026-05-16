@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>soleMATE | Cart</title>
+  <link rel="stylesheet" href="assets/css/cart.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="brand" href="home.html">soleMATE</a>
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <section class="cart-hero">
+      <p class="tagline">Shopping cart</p>
+      <h1>Your sneaker bag.</h1>
+      <p>Multiple shoes can be stored here. Items are saved in your browser using localStorage.</p>
+    </section>
+
+    <section class="cart-layout">
+      <div class="cart-list" id="cartList"></div>
+      <aside class="cart-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-line"><span>Items</span><strong id="itemCount">0</strong></div>
+        <div class="summary-line"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+        <div class="summary-line"><span>Delivery</span><strong>Free</strong></div>
+        <div class="summary-total"><span>Total</span><strong id="total">₹0</strong></div>
+        <a href="checkout/index.html?from=cart" class="checkout-btn" id="checkoutBtn">Checkout</a>
+        <button class="clear-btn" id="clearCart">Clear Cart</button>
+      </aside>
+    </section>
+  </main>
+
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    overflow-x: hidden
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px
+}
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: .92fr 1.08fr;
+    background: #ffffff
+}
+
+.login-card {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    position: relative;
+    z-index: 2
+}
+
+.mode-label {
+    text-transform: uppercase;
+    color: #ff4d00;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-top: 30px
+}
+
+.login-card h1 {
+    font-size: 56px;
+    letter-spacing: -2px;
+    margin: 10px 0
+}
+
+.login-card p {
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 24px
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 22px
+}
+
+.auth-tabs button {
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    padding: 13px;
+    font-weight: 900;
+    cursor: pointer
+}
+
+.auth-tabs button.active {
+    background: #111111;
+    color: #ffffff
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.login-card label {
+    font-weight: 900
+}
+
+.login-card input {
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px
+}
+
+.login-card button[type="submit"] {
+    border: 0;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 17px;
+    font-weight: 900;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease
+}
+
+.login-card button[type="submit"]:hover {
+    transform: translateY(-1px)
+}
+
+.name-field {
+    display: none
+}
+
+.name-field.show {
+    display: block
+}
+
+.switch-copy {
+    margin-top: 18px;
+    margin-bottom: 0 !important
+}
+
+.switch-copy button {
+    border: 0;
+    background: transparent;
+    color: #ff4d00;
+    font-weight: 900;
+    cursor: pointer
+}
+
+.login-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 24px;
+    position: relative;
+    overflow: hidden
+}
+
+.login-art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    pointer-events: none
+}
+
+.rotator-frame {
+    width: min(88%, 680px);
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    filter: none;
+    background: #ffffff
+}
+
+.rotating-sneakers {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: spinSneakers 22s linear infinite
+}
+
+.art-copy {
+    margin-top: 22px;
+    text-align: center;
+    color: #111111
+}
+
+.art-copy p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 900;
+    color: #ff4d00;
+    margin-bottom: 6px
+}
+
+.art-copy h2 {
+    font-size: 34px;
+    letter-spacing: -1px
+}
+
+.login-toast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-14px);
+    background: #111111;
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 900;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 50
+}
+
+.login-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0)
+}
+
+@keyframes spinSneakers {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@media(max-width:950px) {
+    .login-page {
+        grid-template-columns: 1fr
+    }
+
+    .login-art {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        padding: 24px;
+        position: relative;
+        overflow: hidden
+    }
+
+    .login-card {
+        padding: 34px
+    }
+
+    .login-card h1 {
+        font-size: 42px
+    }
+
+    .rotator-frame {
+        width: min(82%, 420px);
+        filter: none;
+        background: #ffffff
+    }
+}

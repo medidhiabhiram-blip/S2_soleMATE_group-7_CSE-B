@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f6f6f6;
+  color: #111111
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+.main-header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.navbar {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-weight: 700
+}
+
+.nav-links a:hover {
+  color: #ff4d00
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 28px
+}
+
+.cart-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 54px 24px
+}
+
+.cart-hero {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 44px;
+  margin-bottom: 28px
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+  color: #ff4d00;
+  letter-spacing: 2px
+}
+
+.cart-hero h1 {
+  font-size: 58px;
+  letter-spacing: -2px;
+  margin: 8px 0
+}
+
+.cart-hero p:last-child {
+  color: #dddddd;
+  font-size: 18px
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.cart-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .08)
+}
+
+.cart-shoe {
+  height: 120px;
+  border-radius: 16px;
+  background: #eeeeee;
+  position: relative;
+  overflow: hidden
+}
+
+.cart-shoe::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 44px;
+  width: 105px;
+  height: 44px;
+  border-radius: 60% 40% 55% 45%;
+  transform: rotate(-10deg);
+  background: var(--shoeGradient, linear-gradient(135deg, #ff4d00, #ffffff, #111111))
+}
+
+.cart-shoe::after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  top: 83px;
+  width: 100px;
+  height: 18px;
+  background: #111111;
+  border-radius: 16px
+}
+
+.cart-info h2 {
+  font-size: 25px;
+  margin-bottom: 6px
+}
+
+.cart-info p {
+  color: #666666;
+  margin: 4px 0
+}
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px
+}
+
+.quantity-row button,
+.remove-btn {
+  border: 0;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer
+}
+
+.quantity-row button {
+  width: 34px;
+  height: 34px;
+  background: #111111;
+  color: #ffffff
+}
+
+.remove-btn {
+  background: #ff4d00;
+  color: #ffffff;
+  padding: 12px 16px
+}
+
+.cart-price {
+  text-align: right;
+  font-size: 22px;
+  font-weight: 900
+}
+
+.cart-summary {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  height: max-content;
+  position: sticky;
+  top: 96px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .08)
+}
+
+.cart-summary h2 {
+  font-size: 28px;
+  margin-bottom: 16px
+}
+
+.summary-line,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eeeeee
+}
+
+.summary-total {
+  font-size: 22px;
+  border-bottom: 0
+}
+
+.checkout-btn,
+.clear-btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border: 0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-weight: 900;
+  margin-top: 12px;
+  cursor: pointer
+}
+
+.checkout-btn {
+  background: #111111;
+  color: #ffffff
+}
+
+.clear-btn {
+  background: #eeeeee;
+  color: #111111
+}
+
+.empty-cart {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 42px;
+  text-align: center
+}
+
+.empty-cart h2 {
+  font-size: 34px
+}
+
+.empty-cart p {
+  color: #666666;
+  margin: 10px 0 22px
+}
+
+.empty-cart a {
+  display: inline-block;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-weight: 900
+}
+
+@media(max-width:850px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 74px;
+    background: #ffffff;
+    padding: 20px;
+    flex-direction: column
+  }
+
+  .nav-links.open {
+    display: flex
+  }
+
+  .menu-btn {
+    display: block
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr
+  }
+
+  .cart-price {
+    text-align: left
+  }
+
+  .cart-hero h1 {
+    font-size: 42px
+  }
+
+  .cart-summary {
+    position: static
+  }
+}
+
+.cart-shoe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit
+}
+
+
+/* Image placeholders: demo shoe drawings removed. Add your local image sources inside these boxes. */
+.image-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed #cfcfcf;
+  background: #f3f3f3;
+  color: #777777;
+  font-weight: 900;
+  letter-spacing: .2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product-image::before,
+.product-image::after,
+.explore-image::before,
+.explore-image::after,
+.mini-shoe::before,
+.mini-shoe::after,
+.shoe-graphic::before,
+.shoe-graphic::after,
+.main-shoe::before,
+.main-shoe::after,
+.thumb::before,
+.shoe-drawn::before,
+.shoe-drawn::after {
+  display: none !important;
+  content: none !important;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .buy-btn {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.featured .trending-grid .buy-btn {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+.cart-shoe.image-slot span {
+  font-size: 12px;
+  color: #777777;
+}
+
+
+/* FINAL CART IMAGE CLEANUP: show only selected shoe photo */
+.cart-image,
+.cart-item .cart-image,
+.cart-product-image {
+  background: #f3f3f3 !important;
+  border: 1px solid #e5e5e5 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+.cart-image::before,
+.cart-image::after,
+.cart-product-image::before,
+.cart-product-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+.cart-image img,
+.cart-product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.cart-image span {
+  color: #777777;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+
+/* Final cart cleanup: remove gradient/demo overlay above shoe image */
+.cart-shoe {
+  background: #f3f3f3 !important;
+  border: 1px solid #e5e5e5 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-shoe::before,
+.cart-shoe::after {
+  display: none !important;
+  content: none !important;
+}
+
+.cart-shoe img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
